@@ -41,4 +41,9 @@ export async function updateFilme(id: number, filme: UpdateFilmeDTO): Promise<vo
 
 export async function deleteFilme(id: number): Promise<void>
 {
+  //ir lá no banco e pedir para deletar o filme
+  await fetch (`${API_URL}/filmes/${id}`,{
+    method:"DELETE"
+  })
+
 }
