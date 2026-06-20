@@ -10,9 +10,11 @@ export async function getFilmes(): Promise<Filme[]>
   return dados;
 }
 
-// export async function getFilme(id: string): Promise<Filme> {
-
-// }
+export async function getFilme(id: string): Promise<Filme> 
+{
+  const response = await fetch(`${API_URL}/filmes/${id}`);
+  return response.json();
+}
 
 export async function createFilme(filme: CreateFilmeDTO): Promise<void>
 {
