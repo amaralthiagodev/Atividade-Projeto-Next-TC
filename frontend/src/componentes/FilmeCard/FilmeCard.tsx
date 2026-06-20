@@ -23,9 +23,9 @@ function FilmeCard({filme, onDelete}: FilmeCardProps){
                 height={400}
             
             />
-            <h2>Nome do Filme</h2>
+            <h2>{filme.titulo}</h2>
 
-            <p>Nota</p>
+            <p>⭐ {filme.nota}</p>
 
             <div className="btn-acoes">
                 <Link href={`/filmes/${filme.id}/editar`}>Editar</Link>
